@@ -1,9 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { Hello } from "./components/Hello";
+import MyAppBar from "./components/MyAppBar";
+import { CssBaseline } from "@material-ui/core";
+import SignIn from "./components/SignIn";
+
+const App = () => <>
+    <CssBaseline />
+    <MyAppBar />
+    <main>
+        <SignIn />
+    </main>
+</>;
 
 ReactDOM.render(
-    <Hello compiler="TypeScript" framework="React" />,
+    <App />,
     document.getElementById("example")
 );
