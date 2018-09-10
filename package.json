@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "@material-ui/core": "^3.0.3",
+    "@material-ui/icons": "^3.0.1",
     "@types/react": "^16.4.13",
     "@types/react-dom": "^16.0.7",
     "awesome-typescript-loader": "^5.2.1",
