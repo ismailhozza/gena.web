@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
     entry: "./src/index.tsx",
     output: {
@@ -12,6 +14,18 @@ module.exports = {
         // Add '.ts' and '.tsx' as resolvable extensions.
         extensions: [".ts", ".tsx", ".js", ".json"]
     },
+
+    // Dev server files.
+    devServer: {
+        contentBase: path.join("./dist"),
+        compress: true,
+        port: 8080
+    },
+
+    // // Plugins.
+    // plugins: [
+    //     new webpack.HotModuleReplacementPlugin()
+    // ],
 
     module: {
         rules: [
