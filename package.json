@@ -1,38 +1,16 @@
 {
-  "name": "gena.web",
-  "version": "1.0.0",
-  "description": "Web access for GenA",
-  "main": "index.js",
-  "scripts": {
-    "test": "test",
-    "watch": "node ./node_modules/webpack-cli/bin/webpack --watch",
-    "build": "node ./node_modules/webpack-cli/bin/webpack --config webpack.prod.js",
-    "public": "cp -a ./public/. ./dist/",
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "gulp": "gulp",
-    "dev-server": "webpack-dev-server --open",
-    "lint": "node ./node_modules/tslint/lib/tslint-cli.js -c tslint.json -p tsconfig.json"
+  "name": "genaweb",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-scripts": "1.1.5"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
-    "@material-ui/core": "^3.0.3",
-    "@material-ui/icons": "^3.0.1",
-    "@types/react": "^16.4.13",
-    "@types/react-dom": "^16.0.7",
-    "@types/react-router-dom": "^4.3.0",
-    "awesome-typescript-loader": "^5.2.1",
-    "gulp": "^3.9.1",
-    "gulp-minify": "^3.1.0",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0",
-    "react-router-dom": "^4.3.1",
-    "source-map-loader": "^0.2.4",
-    "typescript": "^3.0.3",
-    "webpack": "^4.17.2",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.8",
-    "webpack-merge": "^4.1.4"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
