@@ -1,27 +1,27 @@
 import React from "react"
 import { List } from 'semantic-ui-react'
-// import { connect } from "react-redux"
+
+import studentsService from "../services/students"
 
 import Student from "./Student"
 
-const students = [
-    {
-        id: 1,
-        name: "Ayub",
-        gender: "m"
-    },
-    {
-        id: 1,
-        name: "Ugbaad",
-        gender: "f"
-    }
-]
-
 class StudentList extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            students: []
+        }
+    }
+
+    componentDidMount() {
+        console.log(this.props)
+        studentsService.getAll(this.props.user.token).then(students => this.setState({students}))
+    }
+
     render() {
         return (
             <List celled>
-                {students.map((student) =>
+                {this.state.students.map((student) =>
                     <Student
                         student={student}
                     />
@@ -30,19 +30,5 @@ class StudentList extends React.Component {
         )
     }
 }
-
-// const mapStateToProps = (state) => {
-//     return {
-//         notes: state.notes,
-//         filter: state.filter
-//     }
-// }
-
-// const ConnectedNoteList = connect(
-//     mapStateToProps,
-//     {
-//         importanceToggling
-//     }
-// )(NoteList)
 
 export default StudentList
