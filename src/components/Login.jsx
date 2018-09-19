@@ -27,6 +27,7 @@ class Login extends React.Component {
       window.localStorage.setItem('loggedGenaUser', JSON.stringify(user))
       LoginService.setToken(user.token)
       this.setState({username: '', password: ''})
+      this.props.history.push('/')
     } catch(exception) {
       console.error("login failed")
     }

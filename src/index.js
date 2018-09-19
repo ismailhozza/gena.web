@@ -7,7 +7,6 @@ import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
 // import createBrowserHistory from 'history/createBrowserHistory'
-
 // const history = createBrowserHistory()
 
 ReactDOM.render(
